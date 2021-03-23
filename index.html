@@ -4,29 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>Quốc Khánh Việt Nam 02/09</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@5.0.0/normalize.min.css">
 	<style>
-		body {
-			line-height: 1.5;
-			color: #fff;
-			user-select: none;
-		}
-		#canvas {
-			width: 100%;
-			height: 100%;
-			display: block;
-			background: #182026;
-			cursor: move;
-		}
-		#noteEl {
-			position: absolute;
-			left: 16px;
-			top: 16px;
-		}
+		body{line-height:1.5;color:#fff;user-select:none}#canvas{width:100%;height:100%;display:block;background:#182026;cursor:move}#noteEl{position:absolute;left:16px;top:16px;pointer-events:none}
 	</style>
 </head>
 <body>
 <canvas id="canvas"></canvas>
 <div id="noteEl">Mở âm thanh để nghe Quốc Ca và tiếng pháo hoa!</div>
+<script src="https://cdn.jsdelivr.net/npm/zdog@1.0.2/dist/zdog.dist.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/easingjs@1.0.1/easing.min.js"></script>
 <script>
 	(function(){var a,b,c,d,e,f,g,h,m,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V;for(({TAU:r,Illustration:h,Anchor:a,Group:f,Rect:o,RoundedRect:p,Ellipse:e,Polygon:m,Shape:q,Hemisphere:g,Cone:c,Cylinder:d,Box:b}=Zdog),J=!0,K=!1,I=new h({element:"#canvas",dragRotate:!0,translate:{y:16},rotate:{y:r/16,x:-r/16},resize:"fullscreen",zoom:12,onDragStart:function(){J=!1}}),screen.orientation.type.startsWith("portrait")&&(I.zoom=6),O={progress:0,total:3,next:function(){++this.progress===this.total&&(K=!0,S.play())}},R=new p({addTo:I,width:16,height:16,cornerRadius:1,rotate:{x:r/4},stroke:.2,fill:!0,color:"#8878"}),G=new f({addTo:I}),D=new q({addTo:G,path:[{y:0},{y:-16}],stroke:.5,color:"#444"}),F=new c({addTo:G,translate:{y:-.25},rotate:{x:r/4},color:"#444"}),E=new q({addTo:I,translate:{y:-16.5},color:"#444"}),z=new a({addTo:I,translate:{x:-1,y:-14}}),C=[],H=M=0;3>M;H=++M)B=new f({addTo:A||z,translate:{x:1}}),A=new o({addTo:B,width:2,height:4,translate:{x:1},stroke:.5,fill:!0,color:"#c22"}),C.push(B);for(L=N=0;5>N;L=++N)U=new a({addTo:C[1].children[0],rotate:{z:L*r/5}}),T=new m({addTo:U,radius:.8,translate:{y:-.4},scale:{x:.65},stroke:.1,fill:!0,color:"#fc4"});x=["#f73728","#ff8c00","#f3dd1b","#66e516","#0e90f9","#ab23c2","#f7f3f3"],y=new a({addTo:I}),s=()=>{var b,c,d,e,f,g,h;for(c=new a({addTo:y,translate:{x:_.random(-16,16),y:_.random(-24,-36),z:_.random(-16,16)}}),c.n=0,c.dist=_.random(4,8),b=_.sample(x),H=d=0;48>d;H=++d)24===H&&.5>Math.random()&&(b=_.sample(x)),f=new a({addTo:c,rotate:{x:Math.random()*r,y:Math.random()*r,z:Math.random()*r}}),e=new q({addTo:f,color:b}),g=new q({addTo:e,color:b+"33"});h=_.random(24)&&v||w,h=new Audio(h.src),h.play()},v=new Audio("https://freesound.org/data/previews/422/422079_4844309-lq.mp3"),v.oncanplaythrough=()=>{O.next()},w=new Audio("https://freesound.org/data/previews/110/110391_1930766-lq.mp3"),w.oncanplaythrough=()=>{O.next()},S=new Audio("https://cdn.jsdelivr.net/gh/tiencoffee/storage/tienQuanCa.mp3"),S.volume=.5,S.oncanplaythrough=()=>{O.next()},V=new q({addTo:I,path:[{x:0},{x:1},{x:1,y:2},{y:2},{y:0},{move:{x:.5,y:1.5}},{x:.5,y:2.5},{move:{x:2}},{x:2,y:2},{x:3,y:2},{x:3,y:0},{move:{x:4}},{x:5},{x:5,y:2},{x:4,y:2},{x:4},{move:{x:4,y:-.5}},{x:4.5,y:-1},{x:5,y:-.5},{move:{x:5.5,y:-1}},{x:6,y:-1.5},{move:{x:7}},{x:6},{x:6,y:2},{x:7,y:2},{move:{x:10}},{x:10,y:2},{move:{x:11}},{x:10,y:1},{x:11,y:2},{move:{x:12}},{x:12,y:2},{move:{x:12,y:1}},{x:13,y:1},{move:{x:13}},{x:13,y:2},{move:{x:14,y:2}},{x:14.5},{x:15,y:2},{move:{x:14.25,y:1.5}},{x:14.75,y:1.5},{move:{x:14.5,y:-.5}},{x:15,y:-1},{move:{x:16,y:2}},{x:16},{x:17,y:2},{x:17},{move:{x:18}},{x:18,y:2},{move:{x:18,y:1}},{x:19,y:1},{move:{x:19}},{x:19,y:2},{move:{x:6,y:5}},{x:7,y:5},{x:7,y:6},{x:6,y:7},{x:7,y:7},{move:{x:9,y:5}},{x:8,y:7},{move:{x:11,y:6}},{x:10,y:6},{x:10,y:5},{x:11,y:5},{x:11,y:7},{x:10,y:7}],closed:!1,translate:{x:-10,y:-20,z:-16},stroke:.2,color:"#fff"}),u=120,P=0,Q=0,(t=function(){var a,b,c,d,e,f,g,h;for(H=c=0,b=C.length;c<b;H=++c)A=C[H],A.rotate.y=Math.sin(P/16-H*r/5)/2.5;120===u?2048<P&&!_.random(512)&&(u=30):!_.random(64)&&(u=120),K&&!_.random(_.random(0,u))&&s(),d=y.children;for(a of d){a.n+=.01,1<=a.n&&a.remove(),e=a.children;for(g of e)f=g.children[0],f.translate.x=easing.easeOutQuart(a.n)*a.dist,f.stroke=easing.easeOutQuad(1-a.n),h=f.children[0],h.stroke=3*easing.easeInCubic(1-a.n)}J&&512>Q&&K&&(I.rotate.y=r/16+easing.easeInOutQuad(++Q%512/512)*r),I.updateRenderGraph(),P++,requestAnimationFrame(t)})(),setTimeout(()=>noteEl.remove(),8e3)}).call(this);
 </script>
